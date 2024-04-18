@@ -1,0 +1,24 @@
+<%- include('./partials/header') %>
+
+<div class="container-fluid d-flex flex-wrap">
+  <% Books.forEach((book)=>{ %>
+    <div class="card card-body flex-shrink-1 m-5" style="width: 18rem;">
+        <h4 class="card-title"><%= book.title%></h4>
+        <p class="card-text"><b>Author : </b><%= book.author%></p>
+        <p class="card-text"><b>Genre : </b><%= book.genre%></p>
+        <p class="card-text"><b>Language : </b><%= book.language%></p>
+        <p class="card-text"><b>Description : </b><%= book.desc%></p>
+        <a href="#" class="btn text-light" style="width: 10rem; background-color:rgb(94, 64, 3);"><%= book.price%></a>
+      <div class="d-flex mt-1">
+        <a href="/delete/<%=book._id%>" class="btn bg-danger text-light me-1" style="width: 5rem;">Delete</a>
+        <a href="/update/<%=book._id%>" class="btn bg-success text-light" style="width: 5rem;">Update</a>
+      </div>
+    </div> 
+  <% }) %>
+      
+      
+      
+
+</div>
+
+<%- include('./partials/footer') %>

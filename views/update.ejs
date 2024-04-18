@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+
+<div class="card m-auto mt-5 p-2 border-3" style="width: 34rem;border-color: rgb(94, 64, 3);">
+    <form action="/update/<%= book._id%>" method="post">
+      <div class="mb-3">
+        <label for="inputtitle" class="form-label">Book Name</label>
+        <input type="text" class="form-control" id="inputtitle" name="title" value="<%= book.title%>"> 
+      </div>
+      <div class="mb-3">
+        <label for="inputprice" class="form-label">Author</label>
+        <input type="text" class="form-control" id="inputprice" name="author" value="<%=book.author%>">
+      </div>
+      <div class="mb-3">
+        <label for="inputprice" class="form-label">Price</label>
+        <input type="text" class="form-control" id="inputprice" name="price" value="<%=book.price%>">
+      </div>
+      <div class="d-flex">
+        <div class="mb-3" style="width: 50%;">
+          <label for="inputCategory" class="form-label">Category</label>
+          <input type="text" class="form-control" id="inputCategory" name="category" value="<%=book.category%>">
+        </div>
+        <div class="mb-3" style="width: 50%;">
+          <label for="inputLanguage" class="form-label">Language</label>
+          <input type="text" class="form-control" id="inputLanguage" name="language" value="<%=book.language%>">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="inputdesc" class="form-label">Description</label>
+        <textarea class="form-control" id="inputdesc" rows="8" name="desc"><%= book.desc%></textarea>
+      </div>
+
+      <button type="submit" class="btn text-light" style="background-color: rgb(94, 64, 3);">Add To Library</button>
+
+<%- include('./partials/footer') %>
