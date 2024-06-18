@@ -1,3 +1,22 @@
-<%- include('./partials/header') %>
-<h1 style="color:rgb(94,64,3); padding: 5%; font-size: 100px;">Explore, Buy, and Share Your Stories – Your Bookstore and Writing Hub in One Place!"</h1>
-<%- include('./partials/footer') %>
+<%- include('./partials/header')%>
+
+<div class="w-[100%] h-[100vh] overflow-hidden">
+  <nav class="ps-10">
+   <a href="/"> <p class="font-['Kristi'] text-5xl mt-10">bookhub</p></a>
+  </nav>
+  <div class="flex justify-between">
+    <div class="ms-10 w-[60%]">
+      <h2 class="text-8xl capitalize font-light tracking-[-5px] my-24">A room with out books is like a body without soul.</h2>
+      <a href="/book/explore"><button class="border-[#B1DDF5] border-2 px-10 py-3 text-2xl rounded-md">Explore</button></a>
+     <a href="/book/create"> <button class="ms-5 border-[#B1DDF5] border-2 px-10 py-3 text-2xl rounded-md">Add Book</button></a>
+    </div>
+    <%- include('./partials/leftLanding')%>
+  </div>
+  
+  
+</div>
+
+
+
+
+<%- include('./partials/footer')%>

@@ -1,0 +1,13 @@
+<%- include('./partials/header')%>
+<%- include('./partials/nav')%>
+<form action="/book/edit/<%= book._id%>" method="post" enctype="multipart/form-data" class="w-[50vw] border-2 border-[#B1DDF5] m-auto p-5 rounded-md">
+    <input type="file" name="bookImage"class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 rounded-md">
+    <input type="hidden" name="oldImage" value="<%= book.bookImage%>">
+    <input type="text" name="title" value="<%=book.title %>" placeholder="Enter Book Title" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <input type="text" name="author" value="<%= book.author %>" placeholder="Enter Author name" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <input type="text" name="genre" value="<%=book.genre %>" placeholder="Enter Genre" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <textarea type="text" name="desc"  placeholder="Enter Description" rows="8" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md"><%=book.desc %></textarea>
+    <button class="w-full p-2 border-2 border-[#B1DDF5] text-black mt-5 bg-[#B1DDF5] rounded-[10px]">Edit Book</button>
+</form>
+
+<%- include('./partials/footer')%>

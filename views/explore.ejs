@@ -1,0 +1,18 @@
+<%- include('./partials/header')%>
+<%- include('./partials/nav')%>
+
+<div class="flex gap-10 p-10 flex-wrap">
+    <%bookData.forEach((book,index)=>{%>
+            <div class="w-[29.2vw] bg-[#B1DDF5] flex h-[40vh] p-2 rounded-md gap-5 shrink-0">
+                <img src="/images/<%=book.bookImage%>" alt="book cover" class="cover w-[50%] rounded-md">
+                <div class="text-black">
+                    <h2 class="text-2xl font-bold uppercase underline"><a href="/book/visit/<%= book._id%>"><%= book.title%></a></h2>
+                     <h2><i><%=book.author%></i></h2>
+                     <p>Summary</p>
+                     <h2 class="text-sm"><%=book.desc.slice(0,150)%>...</h2>
+                </div>
+            </div>
+    <%})%>
+</div>
+
+<%- include('./partials/footer')%>

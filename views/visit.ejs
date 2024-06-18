@@ -1,0 +1,19 @@
+<%- include('./partials/header')%>
+<%- include('./partials/nav')%>
+
+            <div class="w-[80vw] h-[75vh] bg-[#B1DDF5] flex p-2 rounded-md gap-5 m-auto mt-5 relative">
+                <img src="/images/<%=book.bookImage%>" alt="book cover" class="w-[50%] rounded-md">
+                <div class="text-black">
+                    <h2 class="text-2xl font-bold uppercase"><%= book.title%></h2>
+                     <h2><i><%=book.author%></i></h2>
+                     <p class="mt-5">Summary</p>
+                     <h2 class="text-sm"><%=book.desc%></h2>
+                     <h2 class="font-bold mt-5"><i><%= book.genre%></i></h2>
+                     <div class="absolute bottom-5">
+                        <a href="/book/edit/<%= book._id%>" class="text-2xl"><button><i class="ri-pencil-fill"></i></button></a>
+                        <a href="/book/delete/<%= book._id%>" class="text-2xl"><button><i class="ri-delete-bin-6-fill"></i></button></a>
+                     </div>
+                </div>
+            </div>
+
+<%- include('./partials/footer')%>

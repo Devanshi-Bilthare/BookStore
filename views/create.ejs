@@ -1,37 +1,12 @@
-<%- include('./partials/header') %>
+<%- include('./partials/header')%>
+<%- include('./partials/nav')%>
+<form action="/book/create" method="post" enctype="multipart/form-data" class="w-[50vw] border-2 border-[#B1DDF5] m-auto p-5 rounded-md">
+    <input type="file" name="bookImage" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 rounded-md">
+    <input type="text" name="title" placeholder="Enter Book Title" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <input type="text" name="author" placeholder="Enter Author name" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <input type="text" name="genre" placeholder="Enter Genre" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md">
+    <textarea type="text" name="desc" placeholder="Enter Description" rows="8" class="w-full p-2 bg-transparent border-2 border-[#B1DDF5] color-[#B1DDF5] placeholder-[#B1DDF5] mt-5 outline-none rounded-md"></textarea>
+    <button class="w-full p-2 border-2 border-[#B1DDF5] text-black mt-5 bg-[#B1DDF5] rounded-[10px]">Add Book</button>
+</form>
 
-<div class="card m-auto mt-5 p-2 border-3" style="width: 34rem; border-color: rgb(94, 64, 3);">
-    <form action="/create" method="post">
-      <div class="mb-3">
-        <label for="inputtitle" class="form-label">Book Name</label>
-        <input type="text" class="form-control" id="inputtitle" name="title">
-      </div>
-      <div class="mb-3">
-        <label for="inputprice" class="form-label">Author</label>
-        <input type="text" class="form-control" id="inputprice" name="author">
-      </div>
-      <div class="mb-3">
-        <label for="inputprice" class="form-label">Price</label>
-        <input type="text" class="form-control" id="inputprice" name="price">
-      </div>
-      <div class="d-flex">
-        <div class="mb-3" style="width: 50%;">
-          <label for="inputCategory" class="form-label">Genre</label>
-          <input type="text" class="form-control" id="inputCategory" name="genre">
-        </div>
-        <div class="mb-3" style="width: 50%;">
-          <label for="inputLanguage" class="form-label">Language</label>
-          <input type="text" class="form-control" id="inputLanguage" name="language">
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label for="inputdesc" class="form-label">Description</label>
-        <textarea class="form-control" id="inputdesc" rows="4" name="desc"></textarea>
-      </div>
-
-      <button type="submit" class="btn text-light" style="background-color: rgb(94, 64, 3);">Add To Library</button>
-    </form>
-  </div>
-
-<%- include('./partials/footer') %>
+<%- include('./partials/footer')%>
